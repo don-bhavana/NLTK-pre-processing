@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="index.css">
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-fixed-top">
+        <div class="container-fluid">
+            <h1 id='title'>NLTK Pre-Processing</h1>
+        </div>
+    </nav>
+
+    <!-- INPUT CONTAINER-->
+    <div class="container input_container">
+        <form>
+            <div class="col-xs-6 input-box">
+                <input class="form-control" id="data" type="text" placeholder="Enter Sentence..">
+            </div>
+            <button type="button" class="btn" id="execute-btn">Execute</button>
+        </form>
+    </div>
+    <br><br>
+    <!-- STEP 1 -->
+    <div class="container">
+        <div class="step1">
+            <div class="row">
+                <div class="col-lg-6 step1-info">
+                    <h1 class="step-num">Step-1</h1>
+                    <h4 class="step-title">Tokenizer</h4>
+                    <p>Tokenization is the process of turning sensitive data into nonsensitive data called "tokens" that
+                        can be used in a database or internal system without bringing it into scope.</p>
+                </div>
+                <div class="col-lg-5 table-container" >
+                    <table id="tokenized-table">
+                         <tr>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br><br>
+    <!-- STEP 2 -->
+    <div class="container">
+        <div class="step2">
+            <div class="row">
+                <div class="col-lg-6 step2-info">
+                    <h1 class="step-num">Step-2</h1>
+                    <h4 class="step-title">Stop Word Removal</h4>
+                    <p>Stop words are commonly used words like 'the', 'a', 'an', 'in', etc. Since stop words occur in abundance and providing little to 
+                        no unique information that can be used for classification or clustering,we remove them.Firstly we elimate all the alpha numeric,special characters.
+                        Then,we convert all the letters into lower case.Finally,we remove all the stop words by comparing our input text with the stop word corpus.
+                    </p>
+                </div>
+                <div class="col-lg-5 table-container">
+                    <table id="rm-stopwords-table">
+                        <tr>
+                       </tr>
+                   </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br><br>
+    <!-- STEP 3 -->
+    <div class="container">
+        <div class="step3">
+            <div class="row">
+                <div class="col-lg-6 step3-info">
+                    <h1 class="step-num">Step-3</h1>
+                    <h4 class="step-title">Lemmatization</h4>
+                    <p>Tokenization is the process of turning sensitive data into nonsensitive data called "tokens" that
+                        can be used in a database or internal system without bringing it into scope.</p>
+                </div>
+                <div class="col-lg-5 table-container">
+                    <table id="lemmetized-table">
+                        <tr>
+                       </tr>
+                   </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br><br>
+   
+    <script src="script.js"></script>
+</body>
+
+</html>
